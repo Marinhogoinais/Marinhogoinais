@@ -1,376 +1,1123 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Comosefaz Soluções Empresariais — contabilidade, consultoria tributária, apoio administrativo e soluções empresariais em João Pessoa - PB.">
-<meta name="theme-color" content="#081b33">
-<title>Comosefaz Soluções Empresariais | Contabilidade em João Pessoa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <meta name="description" content="Marinho Contabilidade em Governador Valadares, MG. Serviços contábeis, fiscal, trabalhista e apoio para empresas.">
+    <meta name="author" content="Marinho Contabilidade Ltda.">
+    <meta name="theme-color" content="#123d35">
 
-<style>
-:root{
-  --navy:#071a31;
-  --navy-2:#0b2748;
-  --blue:#1769e0;
-  --blue-2:#0d55bf;
-  --cyan:#18b7a0;
-  --ink:#102238;
-  --muted:#68788d;
-  --bg:#f6f9fc;
-  --line:#e4ebf3;
-  --white:#fff;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{margin:0;color:var(--ink);font-family:"DM Sans",sans-serif;background:#fff;line-height:1.65}
-h1,h2,h3,h4,h5,h6,.brand,.display-font{font-family:"Plus Jakarta Sans",sans-serif}
-a{text-decoration:none}
-.navbar{
-  background:rgba(255,255,255,.93)!important;
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(228,235,243,.8);
-  transition:.25s;
-}
-.navbar.scrolled{box-shadow:0 8px 28px rgba(8,27,51,.08)}
-.brand{font-weight:800;letter-spacing:-.03em;color:var(--navy)}
-.brand-mark{
- width:42px;height:42px;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;
- color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 10px 24px rgba(23,105,224,.2)
-}
-.nav-link{font-weight:600;color:#415269!important;font-size:.94rem}
-.nav-link:hover{color:var(--blue)!important}
-.btn-primary-custom{
- background:var(--blue);border:1px solid var(--blue);color:#fff;border-radius:12px;
- padding:12px 19px;font-weight:700;box-shadow:0 12px 24px rgba(23,105,224,.18)
-}
-.btn-primary-custom:hover{background:var(--blue-2);color:#fff;border-color:var(--blue-2)}
-.btn-outline-custom{border:1px solid #d6e1ed;background:#fff;color:var(--ink);border-radius:12px;padding:12px 19px;font-weight:700}
-.btn-outline-custom:hover{border-color:#a9c3e1;color:var(--blue)}
-.hero{
- position:relative;overflow:hidden;padding:145px 0 90px;
- background:
- radial-gradient(circle at 83% 12%,rgba(24,183,160,.16),transparent 25%),
- radial-gradient(circle at 4% 80%,rgba(23,105,224,.13),transparent 30%),
- linear-gradient(180deg,#f5f9ff 0%,#fff 100%);
-}
-.hero:after{content:"";position:absolute;right:-170px;bottom:-240px;width:500px;height:500px;border:1px solid rgba(23,105,224,.08);border-radius:50%}
-.eyebrow{
- display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:99px;
- background:#eaf3ff;border:1px solid #d7e8fb;color:var(--blue);font-weight:800;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em
-}
-.hero h1{font-size:clamp(2.65rem,5.4vw,5rem);line-height:1.02;letter-spacing:-.065em;font-weight:800;color:var(--navy)}
-.hero h1 span{color:var(--blue)}
-.lead-xl{font-size:1.12rem;color:#5d6f84;max-width:650px}
-.hero-photo{
- min-height:545px;border-radius:30px;position:relative;overflow:hidden;
- background:
- linear-gradient(180deg,rgba(4,20,40,.02),rgba(4,20,40,.46)),
- url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=88") center/cover;
- box-shadow:0 35px 80px rgba(7,26,49,.18)
-}
-.hero-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,rgba(24,183,160,.16))}
-.floating{
- position:absolute;left:24px;bottom:24px;right:24px;background:rgba(255,255,255,.96);border-radius:19px;padding:17px;
- box-shadow:0 18px 40px rgba(5,24,48,.18)
-}
-.float-icon{width:46px;height:46px;border-radius:14px;background:#e8f8f5;color:#087e6e;display:grid;place-items:center;font-size:1.25rem}
-.mini-badge{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:#486078}
-.mini-badge i{color:var(--cyan)}
-.trust{position:relative;z-index:4;margin-top:-38px}
-.trust-box{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 50px rgba(8,31,58,.09);padding:22px}
-.trust-item{display:flex;align-items:center;gap:13px}
-.trust-icon{width:44px;height:44px;border-radius:13px;background:#edf5ff;color:var(--blue);display:grid;place-items:center;font-size:1.2rem}
-.trust-item small{display:block;color:var(--muted)}
-.section{padding:100px 0}
-.section-soft{background:var(--bg)}
-.section-tag{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
-.section-title{font-size:clamp(2rem,3.8vw,3.25rem);font-weight:800;letter-spacing:-.05em;color:var(--navy)}
-.section-text{color:var(--muted);max-width:720px}
-.service{
- height:100%;padding:30px;border:1px solid var(--line);border-radius:22px;background:#fff;
- transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden
-}
-.service:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:#eef5ff;right:-42px;top:-42px}
-.service:hover{transform:translateY(-7px);box-shadow:0 22px 45px rgba(8,31,58,.1);border-color:#ccdeef}
-.service-icon{width:57px;height:57px;border-radius:17px;display:grid;place-items:center;background:#edf5ff;color:var(--blue);font-size:1.4rem;margin-bottom:20px}
-.service h3{font-size:1.1rem;font-weight:800}
-.service p{color:var(--muted);font-size:.93rem}
-.check{list-style:none;padding:0;margin:18px 0 0}
-.check li{margin:8px 0;color:#4d6075;font-size:.9rem}
-.check i{color:var(--cyan);margin-right:7px}
-.stats{background:var(--navy);color:#fff}
-.stat{padding:22px 18px}
-.stat strong{font-family:"Plus Jakarta Sans";font-size:2.15rem;letter-spacing:-.04em}
-.stat span{display:block;color:#9db0c6;font-size:.88rem;margin-top:3px}
-.about-photo{
- min-height:560px;border-radius:28px;
- background:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1300&q=88") center/cover;
- box-shadow:0 28px 65px rgba(8,31,58,.14);position:relative
-}
-.about-stamp{
- position:absolute;left:24px;bottom:24px;background:#fff;border-radius:18px;padding:18px 20px;
- box-shadow:0 16px 35px rgba(8,31,58,.15);max-width:300px
-}
-.info-box{border:1px solid var(--line);border-radius:16px;background:#fff;padding:16px;height:100%}
-.info-box small{display:block;color:var(--muted);margin-bottom:4px}
-.info-box strong{font-size:.92rem}
-.cnae{height:100%;padding:24px;border:1px solid var(--line);border-radius:19px;background:#fff}
-.cnae.primary{border:1px solid #bcd8fa;box-shadow:0 12px 28px rgba(23,105,224,.07)}
-.code{color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.03em}
-.cnae h3{font-size:1.02rem;font-weight:800;margin-top:8px}
-.cnae p{color:var(--muted);font-size:.9rem;margin:6px 0 0}
-.team{height:100%;padding:25px;border:1px solid var(--line);border-radius:20px;background:#fff}
-.avatar{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#eaf3ff,#e7faf6);display:grid;place-items:center;color:var(--blue);font-size:1.35rem;flex:0 0 auto}
-.role{font-size:.8rem;font-weight:800;color:var(--blue)}
-.contact-section{background:linear-gradient(135deg,#f4f9ff,#f2fffc)}
-.contact-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;height:100%}
-.contact-row{display:flex;gap:14px;margin:19px 0}
-.contact-icon{width:44px;height:44px;border-radius:13px;background:#edf5ff;color:var(--blue);display:grid;place-items:center;flex:0 0 auto}
-.contact-row small{display:block;color:var(--muted)}
-.contact-row a,.contact-row strong{color:var(--ink);font-weight:700}
-.map{
- width:100%;height:100%;min-height:515px;border:0;border-radius:22px;box-shadow:0 20px 45px rgba(8,31,58,.08)
-}
-.cta{padding:58px;border-radius:30px;background:linear-gradient(135deg,#1769e0,#083d8f);color:#fff;box-shadow:0 28px 65px rgba(8,61,143,.23);position:relative;overflow:hidden}
-.cta:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-130px}
-.cta p{color:#d9e7f7;max-width:690px}
-footer{background:#061326;color:#9fb0c5}
-footer .footer-brand{color:#fff;font-weight:800}
-footer h6{color:#fff;font-weight:800}
-footer a{color:#bdcad8}
-footer a:hover{color:#fff}
-.social{width:39px;height:39px;border:1px solid #28405d;border-radius:11px;display:inline-grid;place-items:center}
-.top{position:fixed;right:19px;bottom:19px;width:44px;height:44px;border:0;border-radius:13px;background:var(--blue);color:#fff;display:grid;place-items:center;z-index:50;box-shadow:0 12px 28px rgba(23,105,224,.3)}
-@media(max-width:991px){
- .hero{padding-top:120px}.hero-photo{min-height:440px;margin-top:15px}.section{padding:78px 0}.trust{margin-top:22px}
-}
-@media(max-width:575px){
- .hero{padding-bottom:65px}.hero-photo{min-height:365px;border-radius:22px}.hero h1{font-size:2.65rem}
- .section{padding:65px 0}.cta{padding:36px 24px}.trust-box{padding:18px}.map{min-height:400px}
-}
-</style>
+    <title>Marinho Contabilidade | Governador Valadares - MG</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --verde: #123d35;
+            --verde-escuro: #0b2b24;
+            --dourado: #d9a85d;
+            --fundo: #f6f7f3;
+            --texto: #19352f;
+            --texto-suave: #66766f;
+            --borda: #e1e8e2;
+            --branco: #ffffff;
+            --fonte: 'DM Sans', Arial, sans-serif;
+            --titulo: 'Manrope', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--fonte);
+            background: var(--fundo);
+            color: var(--texto);
+            line-height: 1.7;
+        }
+
+        a {
+            transition: .25s ease;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--titulo);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.12;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .section-pad {
+            padding: 85px 0;
+        }
+
+        .eyebrow {
+            color: var(--dourado);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .78rem;
+            font-weight: 800;
+        }
+
+        .section-intro {
+            max-width: 680px;
+            color: var(--texto-suave);
+        }
+
+        /* Navegação */
+
+        .navbar {
+            background: var(--verde);
+            padding: 14px 0;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            background: var(--dourado);
+            color: var(--verde);
+            display: grid;
+            place-items: center;
+            font-size: 1.4rem;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-family: var(--titulo);
+            font-weight: 800;
+            letter-spacing: -.5px;
+        }
+
+        .navbar .nav-link {
+            color: #e1eee8 !important;
+            font-weight: 600;
+            font-size: .92rem;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--dourado) !important;
+        }
+
+        .btn-gold {
+            background: var(--dourado);
+            color: #17352f;
+            border: 1px solid var(--dourado);
+            border-radius: 50px;
+            padding: 12px 23px;
+            font-weight: 700;
+        }
+
+        .btn-gold:hover {
+            background: #edc681;
+            border-color: #edc681;
+            color: #17352f;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            border-radius: 50px;
+            padding: 12px 23px;
+            font-weight: 700;
+        }
+
+        /* Capa principal */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: var(--verde);
+            color: white;
+            padding: 90px 0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border: 1px solid #ffffff22;
+            border-radius: 50%;
+            right: -100px;
+            top: -170px;
+            box-shadow: 0 0 0 45px #ffffff09,
+                        0 0 0 95px #ffffff06;
+            pointer-events: none;
+        }
+
+        .hero p {
+            color: #d4e3dc;
+            font-size: 1.12rem;
+            max-width: 600px;
+        }
+
+        .hero-art {
+            position: relative;
+        }
+
+        .hero-photo {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 28px;
+            border: 7px solid #ffffff18;
+            box-shadow: 0 25px 70px #001b1545;
+        }
+
+        .floating-note {
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            background: white;
+            color: var(--verde);
+            padding: 18px 22px;
+            border-radius: 18px;
+            box-shadow: 0 14px 35px #001b1530;
+            max-width: 245px;
+        }
+
+        .floating-note strong {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        /* Faixa institucional */
+
+        .trust-strip {
+            background: var(--dourado);
+            color: var(--verde);
+            padding: 24px 0;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .trust-item i {
+            font-size: 1.6rem;
+        }
+
+        /* Serviços */
+
+        .service-card {
+            height: 100%;
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--borda);
+            border-radius: 22px;
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 38px #163a2d12;
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background: #e8f0e9;
+            color: var(--verde);
+            display: grid;
+            place-items: center;
+            font-size: 1.65rem;
+            margin-bottom: 22px;
+        }
+
+        .service-card p {
+            color: var(--texto-suave);
+            margin-bottom: 0;
+        }
+
+        /* Sobre */
+
+        .about-panel {
+            background: #e9eee7;
+            border-radius: 28px;
+            padding: clamp(28px, 5vw, 55px);
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            display: flex;
+            gap: 12px;
+            margin: 14px 0;
+        }
+
+        .about-list i {
+            color: #32735b;
+            font-size: 1.15rem;
+        }
+
+        .feature-stat {
+            border-left: 3px solid var(--dourado);
+            padding-left: 18px;
+        }
+
+        .feature-stat strong {
+            display: block;
+            font-family: var(--titulo);
+            font-size: 2.2rem;
+        }
+
+        .feature-stat span {
+            color: var(--texto-suave);
+            font-size: .9rem;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* Chamada para ação */
+
+        .cta-band {
+            background: #e8eee6;
+            border-radius: 26px;
+            padding: 35px;
+        }
+
+        .cta-band p {
+            color: #566b61;
+            margin-bottom: 0;
+        }
+
+        /* Contatos */
+
+        .contact-section {
+            background: var(--verde);
+            color: white;
+        }
+
+        .contact-section .section-intro {
+            color: #d1e1da;
+        }
+
+        .contact-box {
+            height: 100%;
+            padding: 25px;
+            border: 1px solid #ffffff25;
+            border-radius: 20px;
+            background: #ffffff0b;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-box > i {
+            color: var(--dourado);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            color: var(--dourado);
+        }
+
+        /* Localização */
+
+        .address-card {
+            height: 100%;
+            padding: 30px;
+            background: white;
+            border: 1px solid var(--borda);
+            border-radius: 24px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 430px;
+            border: 0;
+            border-radius: 24px;
+        }
+
+        /* Rodapé */
+
+        .footer {
+            background: var(--verde-escuro);
+            color: #d0dfd8;
+            padding: 30px 0;
+            font-size: .9rem;
+        }
+
+        .footer a {
+            color: var(--dourado);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .back-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 48px;
+            height: 48px;
+            border: 0;
+            border-radius: 50%;
+            background: var(--dourado);
+            color: var(--verde);
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px #0002;
+            z-index: 1000;
+        }
+
+        .back-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsividade */
+
+        @media (max-width: 991px) {
+            .navbar .btn-gold {
+                display: inline-block;
+                margin-top: 12px;
+            }
+
+            .hero-art {
+                margin-top: 20px;
+            }
+
+            .floating-note {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-pad {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero-photo {
+                height: 290px;
+            }
+
+            .floating-note {
+                bottom: 8px;
+                max-width: 220px;
+            }
+
+            .trust-item {
+                justify-content: flex-start;
+                margin: 8px 0;
+            }
+
+            .map-frame {
+                height: 330px;
+            }
+
+            .cta-band {
+                padding: 26px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg fixed-top" id="nav">
- <div class="container">
-  <a class="navbar-brand d-flex align-items-center gap-2 brand" href="#inicio">
-   <span class="brand-mark"><i class="bi bi-calculator"></i></span>
-   <span>Comosefaz <span class="text-primary">Soluções</span></span>
-  </a>
-  <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menu"><i class="bi bi-list fs-2"></i></button>
-  <div class="collapse navbar-collapse" id="menu">
-   <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-    <li><a class="nav-link px-lg-3" href="#servicos">Serviços</a></li>
-    <li><a class="nav-link px-lg-3" href="#empresa">Empresa</a></li>
-    <li><a class="nav-link px-lg-3" href="#atividades">Atividades</a></li>
-    <li><a class="nav-link px-lg-3" href="#equipe">Equipe</a></li>
-    <li><a class="nav-link px-lg-3" href="#contato">Contato</a></li>
-    <li class="ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-primary-custom btn-sm" target="_blank" rel="noopener" href="https://wa.me/558332319261?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Comosefaz%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."><i class="bi bi-whatsapp me-1"></i> Fale conosco</a></li>
-   </ul>
-  </div>
- </div>
+
+<!-- MENU PRINCIPAL -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center gap-2"
+           href="#inicio">
+            <span class="brand-mark">
+                <i class="bi bi-calculator-fill"></i>
+            </span>
+            <span>
+                Marinho
+                <span class="fw-normal">Contabilidade</span>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre nós</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#localizacao">Localização</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-gold ms-lg-2"
+                       href="https://wa.me/5533988326761"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
 
+<!-- CAPA -->
 <header class="hero" id="inicio">
- <div class="container position-relative" style="z-index:2">
-  <div class="row align-items-center g-5">
-   <div class="col-lg-6">
-    <div class="eyebrow"><i class="bi bi-patch-check-fill"></i> Contabilidade & soluções empresariais</div>
-    <h1 class="mt-3 mb-4">Mais clareza para seus números. <span>Mais segurança para seu negócio.</span></h1>
-    <p class="lead-xl mb-4">Serviços contábeis, tributários e administrativos para empresas que buscam organização, informação e suporte para crescer.</p>
-    <div class="d-flex flex-wrap gap-3">
-     <a href="#contato" class="btn btn-primary-custom"><i class="bi bi-chat-square-text me-2"></i>Solicitar atendimento</a>
-     <a href="#servicos" class="btn btn-outline-custom"><i class="bi bi-arrow-down-right me-2"></i>Conhecer soluções</a>
+    <div class="container position-relative" style="z-index:1">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <div class="eyebrow mb-3">
+                    <i class="bi bi-stars me-2"></i>
+                    Confiança que faz as contas fecharem
+                </div>
+
+                <h1>
+                    Contabilidade feita para você
+                    <span style="color:var(--dourado)">
+                        crescer com segurança.
+                    </span>
+                </h1>
+
+                <p class="mt-4 mb-4">
+                    Organização, clareza e parceria para cuidar das
+                    obrigações contábeis da sua empresa e ajudar você
+                    a tomar decisões com mais tranquilidade.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-gold"
+                       href="https://wa.me/5533988326761?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20cont%C3%A1beis."
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-chat-dots me-2"></i>
+                        Solicitar atendimento
+                    </a>
+
+                    <a class="btn btn-outline-light" href="#servicos">
+                        Conheça os serviços
+                        <i class="bi bi-arrow-down-right ms-2"></i>
+                    </a>
+                </div>
+
+                <div class="d-flex flex-wrap gap-4 mt-5">
+                    <div>
+                        <i class="bi bi-check-circle-fill me-2"
+                           style="color:var(--dourado)"></i>
+                        Atendimento próximo
+                    </div>
+
+                    <div>
+                        <i class="bi bi-check-circle-fill me-2"
+                           style="color:var(--dourado)"></i>
+                        Compromisso e transparência
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-art">
+
+                    <img
+                        class="hero-photo"
+                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=85"
+                        alt="Profissionais analisando documentos e informações financeiras"
+                        fetchpriority="high">
+
+                    <div class="floating-note">
+                        <span class="text-uppercase small fw-bold">
+                            Sua empresa em boas mãos
+                        </span>
+
+                        <strong>
+                            <i class="bi bi-shield-check me-2"
+                               style="color:#34775d"></i>
+                            Mais tranquilidade
+                        </strong>
+
+                        <span class="small text-secondary">
+                            Apoio para cuidar da rotina contábil.
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="d-flex flex-wrap gap-4 mt-4">
-     <span class="mini-badge"><i class="bi bi-check-circle-fill"></i> Empresa ativa</span>
-     <span class="mini-badge"><i class="bi bi-check-circle-fill"></i> Simples Nacional</span>
-     <span class="mini-badge"><i class="bi bi-check-circle-fill"></i> João Pessoa - PB</span>
-    </div>
-   </div>
-   <div class="col-lg-6">
-    <div class="hero-photo">
-     <div class="floating">
-      <div class="d-flex align-items-center gap-3">
-       <div class="float-icon"><i class="bi bi-graph-up-arrow"></i></div>
-       <div><strong class="d-block">Contabilidade com visão empresarial</strong><span class="text-secondary small">Informação organizada para apoiar decisões do dia a dia.</span></div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
 </header>
 
-<div class="container trust">
- <div class="trust-box">
-  <div class="row g-4">
-   <div class="col-md-4"><div class="trust-item"><div class="trust-icon"><i class="bi bi-patch-check"></i></div><div><strong>Registro profissional</strong><small>CRC PB001192O</small></div></div></div>
-   <div class="col-md-4"><div class="trust-item"><div class="trust-icon"><i class="bi bi-building-check"></i></div><div><strong>CNPJ ativo</strong><small>41.805.556/0001-32</small></div></div></div>
-   <div class="col-md-4"><div class="trust-item"><div class="trust-icon"><i class="bi bi-geo-alt"></i></div><div><strong>Atendimento local</strong><small>José Américo de Almeida · João Pessoa/PB</small></div></div></div>
-  </div>
- </div>
-</div>
+<!-- DIFERENCIAIS -->
+<section class="trust-strip">
+    <div class="container">
+        <div class="row g-3">
 
-<section class="section" id="servicos">
- <div class="container">
-  <div class="text-center mb-5">
-   <div class="section-tag"><i class="bi bi-grid-3x3-gap"></i> Nossas soluções</div>
-   <h2 class="section-title mt-2">Serviços pensados para a rotina da sua empresa</h2>
-   <p class="section-text mx-auto">Do cuidado com a contabilidade ao suporte administrativo, reunimos diferentes frentes para simplificar processos e organizar informações.</p>
-  </div>
-  <div class="row g-4">
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-calculator"></i></div><h3>Contabilidade</h3><p>Organização e acompanhamento das informações contábeis para apoiar a gestão empresarial.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Escrituração contábil</li><li><i class="bi bi-check2-circle"></i>Demonstrações e relatórios</li><li><i class="bi bi-check2-circle"></i>Informações para gestão</li></ul></article></div>
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-receipt-cutoff"></i></div><h3>Consultoria tributária</h3><p>Orientação e acompanhamento de questões fiscais e tributárias conforme o perfil do negócio.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Orientação tributária</li><li><i class="bi bi-check2-circle"></i>Organização fiscal</li><li><i class="bi bi-check2-circle"></i>Conformidade</li></ul></article></div>
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-briefcase"></i></div><h3>Apoio administrativo</h3><p>Suporte às rotinas de escritório para trazer mais organização aos processos empresariais.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Rotinas administrativas</li><li><i class="bi bi-check2-circle"></i>Organização de processos</li><li><i class="bi bi-check2-circle"></i>Suporte de escritório</li></ul></article></div>
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-mortarboard"></i></div><h3>Treinamentos</h3><p>Capacitação em desenvolvimento profissional e gerencial para equipes e empreendedores.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Desenvolvimento profissional</li><li><i class="bi bi-check2-circle"></i>Desenvolvimento gerencial</li><li><i class="bi bi-check2-circle"></i>Conteúdo sob demanda</li></ul></article></div>
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-file-earmark-text"></i></div><h3>Documentação empresarial</h3><p>Preparação de documentos e apoio especializado em atividades administrativas.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Preparação documental</li><li><i class="bi bi-check2-circle"></i>Apoio especializado</li><li><i class="bi bi-check2-circle"></i>Organização</li></ul></article></div>
-   <div class="col-md-6 col-lg-4"><article class="service"><div class="service-icon"><i class="bi bi-search"></i></div><h3>Consultoria e auditoria</h3><p>Atividades de consultoria e auditoria contábil e tributária para necessidades específicas.</p><ul class="check"><li><i class="bi bi-check2-circle"></i>Análise contábil</li><li><i class="bi bi-check2-circle"></i>Análise tributária</li><li><i class="bi bi-check2-circle"></i>Orientação especializada</li></ul></article></div>
-  </div>
- </div>
-</section>
+            <div class="col-md-4">
+                <div class="trust-item">
+                    <i class="bi bi-calendar2-check"></i>
+                    <span>Experiência desde 1994</span>
+                </div>
+            </div>
 
-<section class="stats py-4">
- <div class="container"><div class="row text-center">
-  <div class="col-6 col-lg-3"><div class="stat"><strong>2021</strong><span>Ano de abertura</span></div></div>
-  <div class="col-6 col-lg-3"><div class="stat"><strong>PB</strong><span>CRC PB001192O</span></div></div>
-  <div class="col-6 col-lg-3"><div class="stat"><strong>R$ 500 mil</strong><span>Capital social informado</span></div></div>
-  <div class="col-6 col-lg-3"><div class="stat"><strong>5</strong><span>Frentes de atividade</span></div></div>
- </div></div>
-</section>
+            <div class="col-md-4">
+                <div class="trust-item">
+                    <i class="bi bi-briefcase"></i>
+                    <span>Foco nas necessidades do negócio</span>
+                </div>
+            </div>
 
-<section class="section" id="empresa">
- <div class="container">
-  <div class="row align-items-center g-5">
-   <div class="col-lg-6">
-    <div class="about-photo">
-     <div class="about-stamp"><strong class="d-block">Comosefaz Soluções Empresariais</strong><span class="small text-secondary">Contabilidade e soluções empresariais em João Pessoa - Paraíba.</span></div>
+            <div class="col-md-4">
+                <div class="trust-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Governador Valadares – MG</span>
+                </div>
+            </div>
+
+        </div>
     </div>
-   </div>
-   <div class="col-lg-6">
-    <div class="section-tag"><i class="bi bi-buildings"></i> Sobre a empresa</div>
-    <h2 class="section-title mt-2">Uma estrutura contábil para acompanhar o seu negócio.</h2>
-    <p class="section-text mt-3">A <strong>Comosefaz Soluções Empresariais</strong> é o nome fantasia da <strong>Comosefaz Serviços Contábeis e Soluções Empresariais LTDA</strong>, constituída em 04/05/2021, com sede em João Pessoa, Paraíba.</p>
-    <p class="section-text">Sua atividade principal é <strong>Atividades de contabilidade</strong>, complementada por treinamento profissional e gerencial, apoio administrativo, preparação de documentos e consultoria/auditoria contábil e tributária.</p>
-    <div class="row g-3 mt-2">
-     <div class="col-sm-6"><div class="info-box"><small>CNPJ</small><strong>41.805.556/0001-32</strong></div></div>
-     <div class="col-sm-6"><div class="info-box"><small>CRC</small><strong>PB001192O</strong></div></div>
-     <div class="col-sm-6"><div class="info-box"><small>Porte</small><strong>Micro Empresa</strong></div></div>
-     <div class="col-sm-6"><div class="info-box"><small>Regime informado</small><strong>Simples Nacional</strong></div></div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section-pad" id="servicos">
+    <div class="container">
+
+        <div class="row align-items-end mb-5 g-3">
+            <div class="col-lg-7">
+                <div class="eyebrow mb-2">Como podemos ajudar</div>
+                <h2>Serviços contábeis para uma gestão mais tranquila</h2>
+            </div>
+
+            <div class="col-lg-5">
+                <p class="section-intro mb-0">
+                    Apoio para manter a rotina da empresa organizada,
+                    acompanhar obrigações e dar mais clareza às informações
+                    do negócio. Os serviços são definidos conforme
+                    o perfil de cada cliente.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-journal-check"></i>
+                    </div>
+                    <h3 class="h5">Contabilidade empresarial</h3>
+                    <p>
+                        Organização e escrituração contábil,
+                        demonstrações e informações para acompanhar
+                        a saúde financeira da empresa.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+                    <h3 class="h5">Área fiscal e tributária</h3>
+                    <p>
+                        Apoio na apuração de tributos e no acompanhamento
+                        das obrigações fiscais aplicáveis à atividade
+                        empresarial.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3 class="h5">Departamento pessoal</h3>
+                    <p>
+                        Suporte na rotina trabalhista, folha de pagamento
+                        e obrigações relacionadas aos colaboradores.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-building-add"></i>
+                    </div>
+                    <h3 class="h5">Abertura e regularização</h3>
+                    <p>
+                        Orientação sobre documentação para formalização,
+                        alterações cadastrais e regularização empresarial.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3 class="h5">Relatórios e orientação</h3>
+                    <p>
+                        Informações contábeis organizadas para ajudar
+                        na leitura dos resultados e no planejamento
+                        do negócio.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h3 class="h5">Obrigações acessórias</h3>
+                    <p>
+                        Acompanhamento das declarações e entregas
+                        obrigatórias de acordo com o enquadramento
+                        de cada empresa.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+
+        <p class="small text-secondary mt-4">
+            <i class="bi bi-info-circle me-1"></i>
+            Consulte nossa equipe para confirmar quais serviços
+            se aplicam à sua empresa e ao seu regime tributário.
+        </p>
+
     </div>
-   </div>
-  </div>
- </div>
 </section>
 
-<section class="section section-soft" id="atividades">
- <div class="container">
-  <div class="text-center mb-5"><div class="section-tag"><i class="bi bi-list-check"></i> Atividades econômicas</div><h2 class="section-title mt-2">Contabilidade e soluções para empresas</h2><p class="section-text mx-auto">Atividades econômicas informadas para a empresa, incluindo a atividade principal e atividades secundárias.</p></div>
-  <div class="row g-4">
-   <div class="col-lg-6"><div class="cnae primary"><div class="code">CNAE PRINCIPAL · 69.20-6-01</div><h3>Atividades de contabilidade</h3><p>Atividade econômica principal da empresa.</p></div></div>
-   <div class="col-lg-6"><div class="cnae"><div class="code">CNAE · 69.20-6-02</div><h3>Consultoria e auditoria contábil e tributária</h3><p>Atividades de consultoria e auditoria contábil e tributária.</p></div></div>
-   <div class="col-md-4"><div class="cnae"><div class="code">CNAE · 85.99-6-04</div><h3>Treinamento</h3><p>Treinamento em desenvolvimento profissional e gerencial.</p></div></div>
-   <div class="col-md-4"><div class="cnae"><div class="code">CNAE · 82.11-3-00</div><h3>Escritório e apoio administrativo</h3><p>Serviços combinados de escritório e apoio administrativo.</p></div></div>
-   <div class="col-md-4"><div class="cnae"><div class="code">CNAE · 82.19-9-99</div><h3>Preparação de documentos</h3><p>Preparação de documentos e serviços especializados de apoio administrativo.</p></div></div>
-  </div>
- </div>
-</section>
+<!-- SOBRE A EMPRESA -->
+<section class="pb-5" id="sobre">
+    <div class="container">
 
-<section class="section" id="equipe">
- <div class="container">
-  <div class="mb-5"><div class="section-tag"><i class="bi bi-people"></i> Equipe societária</div><h2 class="section-title mt-2">Quem está à frente da empresa</h2><p class="section-text">Quadro de sócios e administradores informado para a empresa.</p></div>
-  <div class="row g-4">
-   <div class="col-md-4"><div class="team"><div class="d-flex gap-3 align-items-center"><div class="avatar"><i class="bi bi-person-badge"></i></div><div><h3 class="h6 fw-bold mb-1">Analicy Karoliny Carvalho</h3><div class="role">Sócio-Administrador</div></div></div></div></div>
-   <div class="col-md-4"><div class="team"><div class="d-flex gap-3 align-items-center"><div class="avatar"><i class="bi bi-person"></i></div><div><h3 class="h6 fw-bold mb-1">Kleydianne Michelly Ramos Cavalcanti</h3><div class="role">Sócio</div></div></div></div></div>
-   <div class="col-md-4"><div class="team"><div class="d-flex gap-3 align-items-center"><div class="avatar"><i class="bi bi-person"></i></div><div><h3 class="h6 fw-bold mb-1">Pedro Alexandre Nunes de Oliveira</h3><div class="role">Sócio</div></div></div></div></div>
-  </div>
- </div>
-</section>
+        <div class="about-panel">
+            <div class="row align-items-center g-5">
 
-<section class="section section-soft">
- <div class="container">
-  <div class="text-center mb-5"><div class="section-tag"><i class="bi bi-file-earmark-check"></i> Dados cadastrais</div><h2 class="section-title mt-2">Informações da empresa</h2></div>
-  <div class="row g-3">
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Razão Social</small><strong>Comosefaz Servicos Contabeis e Solucoes Empresariais LTDA</strong></div></div>
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Nome Fantasia</small><strong>Comosefaz Solucoes Empresariais</strong></div></div>
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Natureza Jurídica</small><strong>Sociedade Empresária Limitada</strong></div></div>
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Data de abertura</small><strong>04/05/2021</strong></div></div>
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Capital Social</small><strong>R$ 500.000,00</strong></div></div>
-   <div class="col-md-6 col-lg-4"><div class="info-box"><small>Situação cadastral</small><strong class="text-success">Ativa</strong></div></div>
-  </div>
- </div>
-</section>
+                <div class="col-lg-7">
+                    <div class="eyebrow mb-2">Sobre a Marinho</div>
 
-<section class="section contact-section" id="contato">
- <div class="container">
-  <div class="row g-4">
-   <div class="col-lg-5">
-    <div class="section-tag"><i class="bi bi-chat-dots"></i> Fale conosco</div>
-    <h2 class="section-title mt-2">Vamos conversar sobre a sua empresa?</h2>
-    <p class="section-text mt-3">Entre em contato para conhecer nossas soluções contábeis, tributárias e administrativas.</p>
-    <div class="contact-card mt-4">
-     <div class="contact-row"><div class="contact-icon"><i class="bi bi-envelope"></i></div><div><small>E-mail</small><a href="mailto:donisadumoss@gmail.com">donisadumoss@gmail.com</a></div></div>
-     <div class="contact-row"><div class="contact-icon"><i class="bi bi-telephone"></i></div><div><small>Telefones</small><a class="d-block" href="tel:+558332319261">(83) 3231-9261</a><a class="d-block" href="tel:+558332317732">(83) 3231-7732</a></div></div>
-     <div class="contact-row"><div class="contact-icon"><i class="bi bi-geo-alt"></i></div><div><small>Endereço</small><strong>Rua Maria do Carmo Pereira Gama, 56</strong><div class="small text-secondary">José Américo de Almeida · João Pessoa - PB · 58073-455</div></div></div>
-     <div class="d-grid gap-2 mt-4">
-      <a class="btn btn-primary-custom" target="_blank" rel="noopener" href="https://wa.me/558332319261?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Comosefaz%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."><i class="bi bi-whatsapp me-2"></i>Chamar no WhatsApp</a>
-      <a class="btn btn-outline-custom" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rua%20Maria%20do%20Carmo%20Pereira%20Gama%2C%2056%2C%20Jo%C3%A3o%20Pessoa%2C%20PB%2C%2058073-455"><i class="bi bi-map me-2"></i>Abrir no Google Maps</a>
-     </div>
+                    <h2 class="mb-3">
+                        Experiência, responsabilidade e relacionamento próximo.
+                    </h2>
+
+                    <p class="text-secondary">
+                        A Marinho Contabilidade Ltda. atua em
+                        Governador Valadares, Minas Gerais, desde 1994.
+                        Nosso compromisso é oferecer um atendimento
+                        profissional e atencioso, com foco na organização
+                        das informações contábeis e no cumprimento das
+                        responsabilidades da empresa.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>
+                                Atendimento orientado às necessidades
+                                de cada negócio.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>
+                                Comunicação clara para facilitar
+                                o entendimento das rotinas contábeis.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>
+                                Compromisso com a responsabilidade
+                                e a confidencialidade das informações.
+                            </span>
+                        </li>
+                    </ul>
+
+                    <a class="btn btn-gold mt-3"
+                       href="https://wa.me/5533988326761"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        Conheça nosso atendimento
+                    </a>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="row g-4">
+
+                        <div class="col-6">
+                            <div class="feature-stat">
+                                <strong>1994</strong>
+                                <span>Ano de fundação</span>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="feature-stat">
+                                <strong>MG</strong>
+                                <span>Minas Gerais</span>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <img
+                                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                                alt="Equipe profissional reunida em ambiente de trabalho"
+                                class="about-photo"
+                                loading="lazy">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-   </div>
-   <div class="col-lg-7">
-    <iframe class="map" loading="lazy" title="Localização da Comosefaz Soluções Empresariais" src="https://www.google.com/maps?q=Rua%20Maria%20do%20Carmo%20Pereira%20Gama%2C%2056%2C%20Jo%C3%A3o%20Pessoa%2C%20PB%2C%2058073-455&output=embed"></iframe>
-   </div>
-  </div>
- </div>
 </section>
 
-<section class="pb-5">
- <div class="container">
-  <div class="cta">
-   <div class="row align-items-center g-4 position-relative" style="z-index:2">
-    <div class="col-lg-8"><div class="section-tag text-white opacity-75">Atendimento</div><h2 class="display-6 fw-bold mt-2">Organização hoje para decisões melhores amanhã.</h2><p class="mb-0 mt-3">Conte com a Comosefaz Soluções Empresariais para cuidar das rotinas contábeis e apoiar sua empresa.</p></div>
-    <div class="col-lg-4 text-lg-end"><a class="btn btn-light btn-lg fw-bold rounded-3 px-4" target="_blank" rel="noopener" href="https://wa.me/558332319261?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Comosefaz."><i class="bi bi-whatsapp me-2"></i>Falar agora</a></div>
-   </div>
-  </div>
- </div>
+<!-- CHAMADA PARA ATENDIMENTO -->
+<section class="section-pad">
+    <div class="container">
+
+        <div class="cta-band d-lg-flex align-items-center justify-content-between gap-4">
+
+            <div>
+                <div class="eyebrow mb-2">Vamos conversar?</div>
+
+                <h2 class="h3 mb-2">
+                    Sua contabilidade começa com uma boa conversa.
+                </h2>
+
+                <p>
+                    Entre em contato para explicar sua necessidade
+                    e conhecer as opções de atendimento.
+                </p>
+            </div>
+
+            <a class="btn btn-gold mt-4 mt-lg-0 flex-shrink-0"
+               href="https://wa.me/5533988326761?text=Ol%C3%A1%21%20Gostaria%20de%20conversar%20sobre%20contabilidade."
+               target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp me-2"></i>
+                Conversar pelo WhatsApp
+            </a>
+
+        </div>
+
+    </div>
 </section>
 
-<footer class="pt-5 pb-4">
- <div class="container">
-  <div class="row g-4">
-   <div class="col-lg-5">
-    <div class="d-flex align-items-center gap-2 mb-3"><span class="brand-mark"><i class="bi bi-calculator"></i></span><span class="footer-brand fs-5">Comosefaz Soluções Empresariais</span></div>
-    <p class="mb-2">Serviços contábeis e soluções empresariais em João Pessoa - Paraíba.</p>
-    <small>CNPJ 41.805.556/0001-32 · CRC PB001192O</small>
-   </div>
-   <div class="col-6 col-lg-2"><h6>Navegação</h6><div class="d-flex flex-column gap-2 small"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#empresa">Empresa</a><a href="#atividades">Atividades</a></div></div>
-   <div class="col-6 col-lg-2"><h6>Contato</h6><div class="d-flex flex-column gap-2 small"><a href="tel:+558332319261">(83) 3231-9261</a><a href="tel:+558332317732">(83) 3231-7732</a><a href="mailto:donisadumoss@gmail.com">E-mail</a></div></div>
-   <div class="col-lg-3"><h6>Endereço</h6><p class="small mb-0">Rua Maria do Carmo Pereira Gama, 56<br>José Américo de Almeida<br>João Pessoa - PB<br>58073-455</p></div>
-  </div>
-  <hr class="border-secondary my-4">
-  <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small"><span>© <span id="year"></span> Comosefaz Soluções Empresariais.</span><span>Todos os direitos reservados.</span></div>
- </div>
+<!-- CONTATO -->
+<section class="section-pad contact-section" id="contato">
+    <div class="container">
+
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <div class="eyebrow mb-2">Estamos à disposição</div>
+
+                <h2>Fale com a nossa equipe</h2>
+
+                <p class="section-intro">
+                    Escolha o canal mais conveniente. Será um prazer
+                    receber sua mensagem e entender como podemos ajudar.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-3">
+
+            <!-- Telefone -->
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-box">
+                    <i class="bi bi-telephone d-block"></i>
+
+                    <h3 class="h6">Telefone</h3>
+
+                    <p class="mb-1">
+                        <a href="tel:+553332716761">
+                            (33) 3271-6761
+                        </a>
+                    </p>
+
+                    <p class="mb-0">
+                        <a href="tel:+553332775051">
+                            (33) 3277-5051
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-box">
+                    <i class="bi bi-whatsapp d-block"></i>
+
+                    <h3 class="h6">WhatsApp</h3>
+
+                    <p>
+                        <a href="https://wa.me/5533988326761"
+                           target="_blank" rel="noopener noreferrer">
+                            (33) 98832-6761
+                        </a>
+                    </p>
+
+                    <a class="btn btn-gold btn-sm"
+                       href="https://wa.me/5533988326761"
+                       target="_blank" rel="noopener noreferrer">
+                        Enviar mensagem
+                    </a>
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-box">
+                    <i class="bi bi-envelope d-block"></i>
+
+                    <h3 class="h6">E-mail</h3>
+
+                    <p class="mb-0">
+                        <a href="mailto:contato@marinhocontabilidade.net">
+                            contato@marinhocontabilidade.net
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Endereço -->
+            <div class="col-md-6 col-lg-3">
+                <div class="contact-box">
+                    <i class="bi bi-geo-alt d-block"></i>
+
+                    <h3 class="h6">Endereço</h3>
+
+                    <p class="mb-0">
+                        Rua Barão do Rio Branco, 117<br>
+                        Centro · Governador Valadares/MG<br>
+                        CEP 35010-030
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LOCALIZAÇÃO E MAPA -->
+<section class="section-pad" id="localizacao">
+    <div class="container">
+
+        <div class="row g-5 align-items-stretch">
+
+            <div class="col-lg-5">
+                <div class="eyebrow mb-2">Como chegar</div>
+
+                <h2 class="mb-3">Visite nosso escritório</h2>
+
+                <p class="section-intro mb-4">
+                    Estamos no Centro de Governador Valadares.
+                    Consulte o mapa e trace sua rota até o endereço.
+                </p>
+
+                <div class="address-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-pin-map"></i>
+                    </div>
+
+                    <div class="text-uppercase small fw-bold text-secondary mb-2">
+                        Marinho Contabilidade Ltda.
+                    </div>
+
+                    <h3 class="h5">
+                        Rua Barão do Rio Branco, 117
+                    </h3>
+
+                    <p class="text-secondary mb-3">
+                        Centro, Governador Valadares – MG<br>
+                        CEP: 35010-030
+                    </p>
+
+                    <a class="btn btn-gold"
+                       href="https://www.google.com/maps/search/?api=1&query=Rua+Bar%C3%A3o+do+Rio+Branco%2C+117%2C+Centro%2C+Governador+Valadares%2C+MG"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-map me-2"></i>
+                        Abrir no Google Maps
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+
+                <iframe
+                    class="map-frame"
+                    title="Mapa da localização da Marinho Contabilidade em Governador Valadares"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://maps.google.com/maps?q=Rua%20Bar%C3%A3o%20do%20Rio%20Branco%2C%20117%2C%20Centro%2C%20Governador%20Valadares%2C%20MG&z=16&output=embed">
+                </iframe>
+
+                <p class="small text-secondary mt-2">
+                    <i class="bi bi-info-circle me-1"></i>
+                    O mapa aponta para o endereço informado.
+                    Confirme o ponto exato no Google Maps antes de visitar.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="row align-items-center g-3">
+
+            <div class="col-md-7">
+                <strong class="text-white">
+                    Marinho Contabilidade Ltda.
+                </strong>
+
+                <div>
+                    Contabilidade com responsabilidade e proximidade.
+                </div>
+
+                <div class="mt-2">
+                    <a href="#inicio">Início</a>
+                    <span class="mx-2">·</span>
+                    <a href="#servicos">Serviços</a>
+                    <span class="mx-2">·</span>
+                    <a href="#contato">Contato</a>
+                    <span class="mx-2">·</span>
+                    <a href="#localizacao">Localização</a>
+                </div>
+            </div>
+
+            <div class="col-md-5 text-md-end">
+                <div>CNPJ: 00.057.517/0001-17</div>
+
+                <div>
+                    © <span id="year"></span>
+                    Marinho Contabilidade.
+                    Todos os direitos reservados.
+                </div>
+            </div>
+
+        </div>
+    </div>
 </footer>
 
-<a href="#inicio" class="top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up"></i></a>
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button class="back-top"
+        type="button"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="bi bi-arrow-up"></i>
+</button>
 
+<!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));
-document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('#menu .nav-link').forEach(a=>a.addEventListener('click',()=>{
- const menu=document.getElementById('menu');
- if(menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
-}));
+    // Atualiza automaticamente o ano do rodapé.
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    // Fecha o menu mobile depois que um link é selecionado.
+    document.querySelectorAll("#navMenu .nav-link").forEach(function(link) {
+        link.addEventListener("click", function() {
+            var menu = document.getElementById("navMenu");
+
+            if (menu.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
+        });
+    });
 </script>
+
 </body>
 </html>
